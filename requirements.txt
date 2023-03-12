@@ -1,0 +1,7 @@
+transformers[sentencepiece]
+fastapi[all]
+
+mypy # type checker
+ruff # for python 2.7 python liter to higlight syntactical and stylistic problems in python code
+black # code formatter
+ipykernel # for jupyter
