@@ -1,0 +1,8 @@
+service: "service.py:svc"
+labels:
+  owner: hazrul
+  project: machine-translation-api
+include:
+- "*.py"
+python:
+  requirements_txt: "requirements.txt"

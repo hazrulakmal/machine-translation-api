@@ -1,9 +1,5 @@
-transformers==4.26.1 #torch cpu version
-sentencepiece==0.1.97
-fastapi==0.94.0
-torch==1.13.1 #torch cpu version
-
-mypy # type checker
-ruff # for python 2.7 python liter to higlight syntactical and stylistic problems in python code
-black # code formatter
-ipykernel # for jupyter
+transformers[sentencepiece] # for huggingface transformers
+torch # for pytorch
+bentoml
+pydantic
+sacremoses
