@@ -8,19 +8,20 @@ Deploying machine learning models using Bentoml via RESTful API
 python -m venv venv
 source venv/bin/activate
 ```
-3. install dependencies from requirements.txt
+3. Install required dependencies from requirements.txt
 ```bash 
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 ```
 
 ## Usage
-1. Fetch model from huggingface hub and save it as a bentoml model
+1. Fetch models from huggingface hub and save them as bentoml models
 ```bash
-python src/save_model.py
+cd src
+python save_model.py
 ```
-2. Star the bentoml developement server
+2. Start the bentoml developement server
 ```bash
-bentoml serve service:svc 
+bentoml serve service:svc --api-workers 2
 ```
 3. Open http://127.0.0.1:3000 in your browser and send test request from the web UI.
 Make sure to specify three important components in the request body. For example:
@@ -31,6 +32,8 @@ Make sure to specify three important components in the request body. For example
     "target_language": "id"
 }
 ```
+
+docker run -p 3000:3000 multi-translator:hokdnioehogid2ci serve --production --api-workers 2
 
 
 To-list

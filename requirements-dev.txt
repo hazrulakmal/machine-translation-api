@@ -1,1 +1,7 @@
+transformers[sentencepiece] # for huggingface transformers
+torch # for pytorch
+bentoml
+pydantic
+sacremoses
+gradio
 ipykernel # for jupyter
