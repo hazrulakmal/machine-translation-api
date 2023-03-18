@@ -3,6 +3,7 @@ Deploying machine learning models using as a RESTful API via BentoML
 
 <img src = "asset/gradio_frontend.jpeg">
 *Currently supported translation: en-id & id-en*
+*Models from huggingface hub: https://huggingface.co/Helsinki-NLP*
 
 ## Installation
 1. Clone the repository 
@@ -42,6 +43,7 @@ Make sure to specify three important components in the request body. For example
 **Requirements** 
 - Docker
 
+### Steps
 1. Follow the first step in the API section above.
 2. Build the bento to prepare the deployment.
 ```bash
@@ -54,8 +56,9 @@ bentoml containerize multi-translator:latest
 4. Run the docker image
 ```bash
 docker run -p 3000:3000 multi-translator:hokdnioehogid2ci serve --production --api-workers 2
-```P
-*hokdnioehogid2ci* is a unique ID to your bento object. You may want to change that to suit your bento unique ID which can be found after the containerization process.  
+```
+*hokdnioehogid2ci* is a unique ID to your bento object. You may want to change that to suit your bento unique ID which can be found after the containerization process.
+      
 5. Run the web UI
 ```bash
 cd gradio
